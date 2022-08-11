@@ -41,7 +41,7 @@ enum ERNIE_ERRORS {
 
 /* existing CMDs returns with size 0:
 0x100 - 0x00
-0x101 - 0x00 payload some syscon/console info
+0x101 - 0x00 payload some syscon/console info ex. 38508000110503010301750080400C0C last 4 bytes are random each boot
 0x102 - 0x00 payload size 8
 0x103 - 0x00 [UNLOCKS 0x20]
 0x104 - 0x00 [LOCKS 0x20]
