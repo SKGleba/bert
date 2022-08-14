@@ -4,6 +4,7 @@
 ### 0x0101 - get console info
  - response: 0x00
  - output: 3850800011050301030175008040327F
+  - last 4 bytes are variable
 ### 0x0102
  - response: 0x00
  - input: unknown, ascii size 8 bytes
@@ -91,9 +92,11 @@
 ### 0x0171
  - response: 0x00
  - output: 8040327FFFFF61EDF4
+  - output is variable
 ### 0x0172
  - response: 0x00
  - output: CC640500FFFFFFFF00
+  - output is variable
 ### 0x0180
  - response: 0x00
  - output: 8607B70FF200F70056000000
