@@ -185,9 +185,12 @@
  - output: 0000000000010000
 ### 0x0300
  - response: 0x00
+ - input: unknown, 40 ascii bytes
+ - sets some key
 ### 0x0301
  - response: 0x00
  - output: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+ - reads the key set with cmd 0x300
 ### 0x0900 - unlock T4
  - response: 0x00
  - input: password, ascii size 32 bytes
