@@ -73,6 +73,7 @@
  - response: 0x00
 ### 0x0152
  - response: 0x00
+ - unlocks 0x155,0x156
 ### 0x0153
  - response: 0x00
  - output: 01AA0900
@@ -81,13 +82,15 @@
  - response: 0x00
  - input: unknown, min ascii size 6 bytes
 ### 0x0155
- - response: 0x92 or 0x95
+ - response: 0x00
+ - input: unknown, min ascii size 4 bytes
 ### 0x0156
  - response: 0x00
 ### 0x0157
  - response: 0x00
+ - unlocks 0x155,0x156
 ### 0x0160
- - response: 0x33 or 0x90
+ - response: 0x33
 ### 0x0161
  - response: 0x00
  - causes ?soft reset?, UUU is sent again
@@ -244,17 +247,22 @@
    - A9,C0-CF : output 8000
    - D0-EF : output 01C2
 ### 0x0941
- - response: 0x60
+ - response: 0x00
+ - input: unknown, min ascii size 2 bytes
+ - writes somewhere or sets some flag for 0x942
 ### 0x0942
- - response: 0x60
- - output: FF24
+ - response: 0x00
+ - input: unknown, min ascii size 2 bytes
+ - output: 0000 unless written with 0x941, mashed with input
 ### 0x0943
- - response: 0x60
+ - response: 0x00
+ - input: unknown, min ascii size 2 bytes
 ### 0x0944
  - response: 0x00
  - output: 9801
 ### 0x0945
- - response: 0x60
+ - response: 0x00
+ - input: unknown, min ascii size 2 bytes
 ### 0x0952
  - response: 0x00
  - causes ?soft reset?, UUU is sent again after around 3s
