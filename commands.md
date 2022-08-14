@@ -185,7 +185,7 @@
  - output: 0000000000010000
 ### 0x0300
  - response: 0x00
- - input: unknown, 40 ascii bytes
+ - input: unknown, ascii size 80 bytes
  - sets some key
 ### 0x0301
  - response: 0x00
