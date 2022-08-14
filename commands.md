@@ -1,3 +1,4 @@
+## Command list tested with a live unit
 ### 0x0100
  - response: 0x00
 ### 0x0101 - get console info
