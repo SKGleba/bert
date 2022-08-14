@@ -105,8 +105,6 @@ def handle_cmd(user_cmd):
     match user_cmd:
         case "getinfo":
             send_simple_cmd("0101000000")
-        case "lockall": # TODO: make sure it only resets auth...
-            send_simple_cmd("6101000000")
         case "unlock1":
             send_simple_cmd("0301000000")
         case "lock1":
