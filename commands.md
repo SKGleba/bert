@@ -13,8 +13,11 @@
 ### 0x0104 - unlock T1
  - response: 0x00
 ### 0x0105
- - response: 0x33
- - with input size 4 or greater resp changes to 0x50
+ - response: 0x00
+ - input: unknown, min ascii size 2 bytes
+   - 00 : resp 0x50
+   - 02 : resp 0x00
+   - 03 : resp 0x50
 ### 0x0106
  - response: 0x00
  - output: 0400
@@ -23,9 +26,15 @@
  - output: 32303133313231333135353207000000000000000000000000000000
  - output hex2ascii : 201312131552
 ### 0x0108
- - response: 0x33
+ - response: 0x00
+ - output: 100001C20000000020008043000000003000A90016045300310020050208A90040FFFFFF00000000
+ - input: unknown, min ascii size 4 bytes
 ### 0x0109
- - response: 0x33
+ - response: 0x00
+ - output: 0900040000000000320000000000000000000000000000000000000000000000
+ - input: unknown, min ascii size 2 bytes
+   - 00 : output 0900040000000000320000000000000000000000000000000000000000000000
+   - 01 : output 0802020000000200610009020400000004003200000000000000000000000000
 ### 0x0110 - unlock T8 or T2
  - response: 0x00
  - input: 3-step handshake, ascii size 80 bytes
@@ -43,7 +52,8 @@
  - response: 0x00
  - output: 5800050058000400
 ### 0x0141
- - response: 0xD8
+ - response: 0x00
+ - input: unknown, min ascii size 6 bytes
 ### 0x0142
  - response: 0xD0
 ### 0x0143
@@ -64,17 +74,20 @@
 ### 0x0152
  - response: 0x00
 ### 0x0153
- - response: 0x92
+ - response: 0x00
+ - output: 01AA0900
+ - input: unknown, min ascii size 4 bytes
 ### 0x0154
- - response: 0x92
+ - response: 0x00
+ - input: unknown, min ascii size 6 bytes
 ### 0x0155
- - response: 0x92
+ - response: 0x92 or 0x95
 ### 0x0156
  - response: 0x00
 ### 0x0157
  - response: 0x00
 ### 0x0160
- - response: 0x33
+ - response: 0x33 or 0x90
 ### 0x0161
  - response: 0x00
  - causes ?soft reset?, UUU is sent again
@@ -108,13 +121,13 @@
  - causes ?soft reset?, UUU is sent again after a longer period (~6 seconds)
 ### 0x0183
  - response: 0x00
+ - unlocks 0x184,0x185,0x186,0x187,0x188,0x189
 ### 0x0184
  - response: 0x00
 ### 0x0185
  - response: 0x33
 ### 0x0186
  - response: 0x00
- - sometimes changes to 0xFF and can not be unlocked
 ### 0x0187
  - response: 0x33
 ### 0x0188
@@ -151,13 +164,15 @@
  - output: 01550000
 ### 0x01C1
  - response: 0x00
- - sometimes changes to 0xFF and can not be unlocked
 ### 0x01C2
  - response: 0x00
 ### 0x01C3
  - response: 0x00
+ - unlocks 0x1C1,0x1C4
 ### 0x01C4
- - response: 0x33
+ - response: 0x00
+ - output: 36300301FF000400
+ - input: unknown, min ascii size 4 bytes
 ### 0x01D0
  - response: 0x98
 ### 0x01D1
@@ -203,8 +218,31 @@
  - response: 0x00
  - output: 2005A900160453000208A900
 ### 0x0940
- - response: 0x60
- - output: 05A9
+ - response: 0x00
+ - output: 0300
+ - input: unknown
+   - : output 05A9 resp 0x60
+   - 00-03,08-0D,24,25,33-35,37,41,44,48 : output 0300
+   - 04-07,0F-1F,36,38-3F : output 0400
+   - 0E : output 0600
+   - 20-22,40,43,46,47,49-4F : output 0200
+   - 23,26-32,90-9F : output 0100
+   - 42,71,72 : output 0004
+   - 45 : output 0404
+   - 50 : output 5541
+   - 51,54 : output 4105
+   - 52,55 : output 1000
+   - 53 : output AA81
+   - 56-5F,80,A0-A3,A5-A7,AA-B2,F0-FF : output 0000
+   - 60-70 : output FFF0
+   - 73 : output 0005
+   - 74-7F : output 0101
+   - 81 : output 1500
+   - 82-85 : output 1700
+   - 86-8F : output 0F00
+   - B3-BF : output F000
+   - A9,C0-CF : output 8000
+   - D0-EF : output 01C2
 ### 0x0941
  - response: 0x60
 ### 0x0942
