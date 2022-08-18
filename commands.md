@@ -13,11 +13,11 @@
 ### 0x0104 - unlock T1
  - response: 0x00
 ### 0x0105
- - response: 0x00
+ - response: 0x00 if completed, 0x50 if bad/locked args
  - input: unknown, min ascii size 2 bytes
-   - 00 : resp 0x50
-   - 02 : resp 0x00
+   - 02 : resp 0x00 unlocks inputs 00,0002,0004,0008
    - 03 : resp 0x50
+ - takes ~2 seconds to complete
 ### 0x0106
  - response: 0x00
  - output: 0400
