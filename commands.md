@@ -35,7 +35,7 @@
  - input: unknown, min ascii size 2 bytes
    - 00 : output 0900040000000000320000000000000000000000000000000000000000000000
    - 01 : output 0802020000000200610009020400000004003200000000000000000000000000
-### 0x0110 - unlock T8 or T2
+### 0x0110 - unlock T8 or T2 or kermit sd mode
  - response: 0x00
  - input: 3-step handshake, ascii size 80 bytes
 ### 0x0120
