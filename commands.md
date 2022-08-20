@@ -42,12 +42,14 @@
  - response: 0x40
 ### 0x0121
  - response: 0x40
-### 0x0131
+### 0x0131 - NVS read
  - auth level: T2
- - response: 0xA3
-### 0x0132
+ - response: 0x00
+ - input: 2byte offset + 1byte size, min size 6 ascii bytes
+### 0x0132 NVS write
  - auth level: T2
- - response: 0xA3
+ - response: 0x00
+ - input: 2byte offset + 1byte size + sizeBytes data, min size 6 ascii bytes
 ### 0x0140
  - response: 0x00
  - output: 5800050058000400
