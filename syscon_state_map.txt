@@ -1,79 +1,79 @@
-PCH-2001 USS-1002									PDEL-1000 IRT-002
-
-State 0:
-Flag 78 -> action GetVoltage if held -> 7A       	Flag 78  -> action GetVoltage if held -> 7A   
-Flag 79 -> action GetVoltage if held -> 7A			Flag 7A -> action processVoltageTriggers -> 82
-Flag 7A -> action processVoltageTriggers-> 82
-Flag 98 -> action 98
-
-State 1:
-Flag 67 -> state 3									Flag 67 -> state 3
-Flag 15 -> state 3                                  Flag 15 -> state 3
-Flag 17 -> state 8                                  Flag 66 -> state 5
-Flag 18 -> state 9                                  Flag 69 -> state 5
-Flag 66 -> state 5                                  Flag 32 -> jig stateA 4 
-Flag 69 -> state 5                                  Flag 33 -> jig stateA 2 
-Flag 32 -> jig state 4                              Flag 34 -> jig stateA 8 
-Flag 33 -> jig state 2                              Flag 35 -> jig stateA 10
-Flag 34 -> jig state 8                              Flag 1 -> jig stateB 400
-Flag 35 -> jig state 10                             Flag 2 -> jig stateB 200
-Flag 1 -> jig state 400                             Flag 3 -> jig stateB 800
-Flag 2 -> jig state 200                             Flag 4 -> action 4
-Flag 3 -> jig state 800                             Flag 4 -> action 
-Flag 4 -> action 4                                  Flag 5 -> state 5
-Flag 5 -> state 5									Flag 78 -> action GetVoltage if held -> 7A
-Flag 78 -> action GetVoltage if held -> 7A          Flag 7A -> action processVoltageTriggers -> 82
-Flag 79 -> action GetVoltage if held -> 7A          Flag 82 -> action 82
-Flag 7A -> action processVoltageTriggers
-Flag 98 -> action 98
-Flag 82 -> action 82
-Flag 83 -> action 83
-Flag 96 -> action 96
-Flag 97 -> action 97
-
-State 2:                                             
-Flag 66 -> state 5                                  Flag 66 -> state 5   
-Flag 69 -> state 5                                  Flag 69 -> state 5   
-Flag 82 -> action 82                                Flag 82 -> action 82
-Flag 83 -> action 83
-
-State 3:
-Flag 66 -> state 5                                  Flag 66 -> state 5                        
-Flag 69 -> state 5                                  Flag 69 -> state 5                        
-Flag 14 -> state 1                                  Flag 14 -> state 1                        
-Flag 16 -> state 1                                  Flag 16 -> state 1                        
-Flag 1E -> state 5                                  Flag 1E -> state 5                        
-Flag 1F -> state 5                                  Flag 1F -> state 5                        
-Flag 20 -> state 6                                  Flag 20 -> state 6                        
-Flag 32 -> jig state 4                              Flag 32 -> jig state 4                    
-Flag 33 -> jig state 2                              Flag 33 -> jig state 2                    
-Flag 34 -> jig state 8                              Flag 34 -> jig state 8                    
-Flag 35 -> jig state 10                             Flag 35 -> jig state 10                   
-Flag 1 -> jig state 400                             Flag 1 -> jig state 400                   
-Flag 2 -> jig state 200                             Flag 2 -> jig state 200                   
-Flag 3 -> jig state 800                             Flag 3 -> jig state 800                   
-Flag 4 -> action 4                                  Flag 4 -> action 4                        
-Flag 5 -> state 5                                   Flag 5 -> state 5                         
-Flag 78 -> action GetVoltage if held -> 7A          Flag 78 -> action GetVoltage if held -> 7A
-Flag 79 -> action GetVoltage if held -> 7A          Flag 7A -> action processVoltageTriggers -> 82
-Flag 7A -> action processVoltageTriggers -> 82      Flag 82 -> action 82
-Flag 98 -> action 98                                Port 1.6 high -> kermit command handler    
-Flag 82 -> action 82                                held for 8 events                          
-Flag 83 -> action 83
-Flag 96 -> action 96
-Flag 97 -> action 97
-Port 1.6 high -> kermit command handler
-held for 8 events
-
-State 4:
-Flag 66 -> state 5                                  Flag 66 -> state 5                     
-Flag 69 -> state 5                                  Flag 69 -> state 5                     
-Flag 1E -> state 5                                  Flag 1E -> state 5                     
-Flag 1F -> state 5                                  Flag 1F -> state 5                     
-Flag 20 -> state 6                                  Flag 20 -> state 6                     
-Port 1.6 high -> kermit command handler             Port 1.6 high -> kermit command handler
-Flag 5 -> state 5                                   Flag 5 -> state 5                      
-held for 8 events                                   held for 8 events                      
+PCH-2001 USS-1002									PDEL-1000 IRT-002                                                  DOL-1001 VTE-1001                                                 
+                                                                                                                                                                                         
+State 0:                                                                                                                                                                                 
+Flag 78 -> action GetVoltage if held -> 7A       	Flag 78  -> action GetVoltage if held -> 7A                        Flag 78  -> action GetVoltage if held -> 7A                       
+Flag 79 -> action GetVoltage if held -> 7A			Flag 7A -> action processVoltageTriggers -> 82                     Flag 7A -> action processVoltageTriggers -> 82                    
+Flag 7A -> action processVoltageTriggers-> 82                                                                                                                                            
+Flag 98 -> action 98                                                                                                                                                                     
+                                                                                                                                                                                         
+State 1:                                                                                                                                                                                 
+Flag 67 -> state 3									Flag 67 -> state 3                                                 Flag 67 -> state 3							
+Flag 15 -> state 3                                  Flag 15 -> state 3                                                 Flag 15 -> state 3                           
+Flag 17 -> state 8                                  Flag 66 -> state 5                                                 Flag 17 -> state 8                           
+Flag 18 -> state 9                                  Flag 69 -> state 5                                                 Flag 18 -> state 9                           
+Flag 66 -> state 5                                  Flag 32 -> jig stateA 4                                            Flag 66 -> state 5                           
+Flag 69 -> state 5                                  Flag 33 -> jig stateA 2                                            Flag 69 -> state 5                           
+Flag 32 -> jig state 4                              Flag 34 -> jig stateA 8                                            Flag 32 -> jig state 4                       
+Flag 33 -> jig state 2                              Flag 35 -> jig stateA 10                                           Flag 33 -> jig state 2                       
+Flag 34 -> jig state 8                              Flag 1 -> jig stateB 400                                           Flag 34 -> jig state 8                       
+Flag 35 -> jig state 10                             Flag 2 -> jig stateB 200                                           Flag 35 -> jig state 10                      
+Flag 1 -> jig state 400                             Flag 3 -> jig stateB 800                                           Flag 1 -> jig state 400                      
+Flag 2 -> jig state 200                             Flag 4 -> action 4                                                 Flag 2 -> jig state 200                      
+Flag 3 -> jig state 800                             Flag 4 -> action                                                   Flag 3 -> jig state 800                      
+Flag 4 -> action 4                                  Flag 5 -> state 5                                                  Flag 4 -> action 4                           
+Flag 5 -> state 5									Flag 78 -> action GetVoltage if held -> 7A                         Flag 5 -> state 5							
+Flag 78 -> action GetVoltage if held -> 7A          Flag 7A -> action processVoltageTriggers -> 82                     Flag 78 -> action GetVoltage if held -> 7A   
+Flag 79 -> action GetVoltage if held -> 7A          Flag 82 -> action 82                                               Flag 7A -> action processVoltageTriggers -> 82                     
+Flag 7A -> action processVoltageTriggers                                                                               Flag 82 -> action 82                                               
+Flag 98 -> action 98                                                                                                   Flag 97 -> action 97                                                                  
+Flag 82 -> action 82                                                                                                                                                                     
+Flag 83 -> action 83                                                                                                                                                                     
+Flag 96 -> action 96                                                                                                                                                                     
+Flag 97 -> action 97                                                                                                                                                                     
+                                                                                                                                                                                         
+State 2:                                                                                                                                                                                 
+Flag 66 -> state 5                                  Flag 66 -> state 5                                                 Flag 66 -> state 5                                                
+Flag 69 -> state 5                                  Flag 69 -> state 5                                                 Flag 69 -> state 5                                                
+Flag 82 -> action 82                                Flag 82 -> action 82                                               Flag 82 -> action 82                                              
+Flag 83 -> action 83                                                                                                                                                                     
+                                                                                                                                                                                         
+State 3:                                                                                                                                                                                 
+Flag 66 -> state 5                                  Flag 66 -> state 5                                                 Flag 66 -> state 5                                                
+Flag 69 -> state 5                                  Flag 69 -> state 5                                                 Flag 69 -> state 5                                                
+Flag 14 -> state 1                                  Flag 14 -> state 1                                                 Flag 14 -> state 1                                                
+Flag 16 -> state 1                                  Flag 16 -> state 1                                                 Flag 16 -> state 1                                                
+Flag 1E -> state 5                                  Flag 1E -> state 5                                                 Flag 1E -> state 5                                                
+Flag 1F -> state 5                                  Flag 1F -> state 5                                                 Flag 1F -> state 5                                                
+Flag 20 -> state 6                                  Flag 20 -> state 6                                                 Flag 20 -> state 6                                                
+Flag 32 -> jig state 4                              Flag 32 -> jig state 4                                             Flag 32 -> jig state 4                                            
+Flag 33 -> jig state 2                              Flag 33 -> jig state 2                                             Flag 33 -> jig state 2                                            
+Flag 34 -> jig state 8                              Flag 34 -> jig state 8                                             Flag 34 -> jig state 8                                            
+Flag 35 -> jig state 10                             Flag 35 -> jig state 10                                            Flag 35 -> jig state 10                                           
+Flag 1 -> jig state 400                             Flag 1 -> jig state 400                                            Flag 1 -> jig state 400                                           
+Flag 2 -> jig state 200                             Flag 2 -> jig state 200                                            Flag 2 -> jig state 200                                           
+Flag 3 -> jig state 800                             Flag 3 -> jig state 800                                            Flag 3 -> jig state 800                                           
+Flag 4 -> action 4                                  Flag 4 -> action 4                                                 Flag 4 -> action 4                                                
+Flag 5 -> state 5                                   Flag 5 -> state 5                                                  Flag 5 -> state 5                                                 
+Flag 78 -> action GetVoltage if held -> 7A          Flag 78 -> action GetVoltage if held -> 7A                         Flag 78 -> action GetVoltage if held -> 7A                        
+Flag 79 -> action GetVoltage if held -> 7A          Flag 7A -> action processVoltageTriggers -> 82                     Flag 7A -> action processVoltageTriggers -> 82                    
+Flag 7A -> action processVoltageTriggers -> 82      Flag 82 -> action 82                                               Flag 82 -> action 82                                              
+Flag 98 -> action 98                                Port 1.6 high -> kermit command handler                            Flag 8C -> action 8C                           
+Flag 82 -> action 82                                held for 8 events                                                  Flag 97 -> action 97                                                 
+Flag 83 -> action 83                                                                                                   Port 1.6 high -> kermit command handler                                                                  
+Flag 96 -> action 96                                                                                                   held for 8 events                                                                   
+Flag 97 -> action 97                                                                                                                                                                     
+Port 1.6 high -> kermit command handler                                                                                                                                                  
+held for 8 events                                                                                                                                                                        
+                                                                                                                                                                                         
+State 4:                                                                                                                                                                                 
+Flag 66 -> state 5                                  Flag 66 -> state 5                                                 Flag 66 -> state 5                                                
+Flag 69 -> state 5                                  Flag 69 -> state 5                                                 Flag 69 -> state 5                                                
+Flag 1E -> state 5                                  Flag 1E -> state 5                                                 Flag 1E -> state 5                                                
+Flag 1F -> state 5                                  Flag 1F -> state 5                                                 Flag 1F -> state 5                                                
+Flag 20 -> state 6                                  Flag 20 -> state 6                                                 Flag 20 -> state 6                                                
+Port 1.6 high -> kermit command handler             Port 1.6 high -> kermit command handler                            Port 1.6 high -> kermit command handler                           
+Flag 5 -> state 5                                   Flag 5 -> state 5                                                  Flag 5 -> state 5                                                 
+held for 8 events                                   held for 8 events                                                  held for 8 events                                                 
 
 State 7:
 All -> state 3
