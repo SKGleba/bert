@@ -126,20 +126,24 @@
  - unlocks 0x155,0x156
 ### 0x0160
  - response: 0x33
-### 0x0161 - reset syscon
+### 0x0161 - ?hard? reset syscon
  - response: 0x00
  - causes ?soft reset?, UUU sent again, console shutdown
-### 0x0162 - reset auth/state?
+### 0x0162 - ?soft? reset syscon
  - response: 0x00
  - causes ?soft reset?, UUU is sent again, faster than 0x162
 ### 0x0163
  - response: 0x33
 ### 0x0168
  - response: 0x00
- - output: 70033737
+ - output: 
+   - slim: 70033737
+   - pstv: 70033535
 ### 0x0170
  - response: 0x00
- - output: 01420000250000001B0CFFFFF8000F00000000000018
+ - output: 
+   - slim: 01420000250000001B0CFFFFF8000F00000000000018
+   - pstv: 0102000100
 ### 0x0171
  - response: 0x00
  - output: 8040327FFFFF61EDF4
@@ -150,13 +154,18 @@
    - output is variable
 ### 0x0180
  - response: 0x00
- - output: 8607B70FF200F70056000000
+ - output: 
+   - slim: 8607B70FF200F70056000000
+   - pstv: D007A00F2C012C0100000000
 ### 0x0181
  - response: 0x00
- - output: 110080016201000000000000
+ - output: 
+   - slim: 110080016201000000000000
+   - pstv: 000000000000000000000000
 ### 0x0182
  - response: 0x00
- - causes ?soft reset?, UUU is sent again after a longer period (~6 seconds)
+ - causes ?hard reset?, UUU is sent again after a longer period (~6 seconds)
+   - nothing on PSTV - makes me think its the battery controller
 ### 0x0183
  - response: 0x00
  - unlocks 0x184,0x185,0x186,0x187,0x188,0x189
@@ -174,19 +183,27 @@
  - response: 0x00
 ### 0x018A
  - response: 0x00
- - output: 40000000
+ - output: 
+   - slim: 40000000
+   - pstv: 00000000
 ### 0x018B
  - response: 0x00
  - output: 01
 ### 0x018C
  - response: 0x00
- - output: 0C
+ - output: 
+   - slim: 0C
+   - pstv: 09
 ### 0x018D
  - response: 0x00
- - output: 00
+ - output: 
+   - slim: 00
+   - pstv: 08
 ### 0x018E
  - response: 0x00
- - output: 01
+ - output: 
+   - slim: 01
+   - pstv: 0C
 ### 0x0190
  - response: 0x00
  - output: 0100000000010000
