@@ -126,10 +126,10 @@
  - unlocks 0x155,0x156
 ### 0x0160
  - response: 0x33
-### 0x0161
+### 0x0161 - reset syscon
  - response: 0x00
- - causes ?soft reset?, UUU is sent again
-### 0x0162
+ - causes ?soft reset?, UUU sent again, console shutdown
+### 0x0162 - reset auth/state?
  - response: 0x00
  - causes ?soft reset?, UUU is sent again, faster than 0x162
 ### 0x0163
