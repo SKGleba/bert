@@ -62,10 +62,10 @@
  - output: 
    - slim: 5800050058000400
    - pstv: 5000040050000300
-### 0x0141
+### 0x0141 - ConfZZ read
  - response: 0x00
  - input: 2byte offset + 1byte size, max offset 0x3EF, max size 0x20
- - output: unknown data of size read from offset
+ - output: ConfZZ data of size read from offset
 ### 0x0142
  - response: 0xD0
 ### 0x0143
