@@ -16,25 +16,32 @@
  - response: 0x00 if completed, 0x50 if bad/locked args
  - input: unknown, min ascii size 2 bytes
    - 02 : resp 0x00 unlocks inputs 00,0002,0004,0008
+     - boots the pstv
    - 03 : resp 0x50
  - takes ~2 seconds to complete
 ### 0x0106
  - response: 0x00
- - output: 0400
+ - output: 0400 on slim, 0800 on pstv
 ### 0x0107 - get date string
  - response: 0x00
  - output: 32303133313231333135353207000000000000000000000000000000
  - output hex2ascii : 201312131552
 ### 0x0108
  - response: 0x00
- - output: 100001C20000000020008043000000003000A90016045300310020050208A90040FFFFFF00000000
+ - output: 
+   - slim: 100001C20000000020008043000000003000A90016045300310020050208A90040FFFFFF00000000
+   - pstv: 100001920000000020FFFFFF0000000030FFFFFFFFFFFFFF31FFFFFFFFFFFFFF40001ACA00000000
  - input: unknown, min ascii size 4 bytes
 ### 0x0109
  - response: 0x00
  - output: 0900040000000000320000000000000000000000000000000000000000000000
  - input: unknown, min ascii size 2 bytes
-   - 00 : output 0900040000000000320000000000000000000000000000000000000000000000
-   - 01 : output 0802020000000200610009020400000004003200000000000000000000000000
+   - 00 : output:
+     - slim: 0900040000000000320000000000000000000000000000000000000000000000
+     - pstv: 0900080000000000510000000000000000000000000000000000000000000000
+   - 01 : output:
+     - slim: 0802020000000200610009020400000004003200000000000000000000000000
+     - pstv: 0802200000002000090009020800000008005100000000000000000000000000
 ### 0x0110 - unlock T8 or T2 or kermit sd mode
  - response: 0x00
  - input: 3-step handshake, ascii size 80 bytes
@@ -45,17 +52,20 @@
 ### 0x0131 - NVS read
  - auth level: T2
  - response: 0x00
- - input: 2byte offset + 1byte size, min size 6 ascii bytes
+ - input: 2byte offset + 1byte size
 ### 0x0132 NVS write
  - auth level: T2
  - response: 0x00
  - input: 2byte offset + 1byte size + sizeBytes data, min size 6 ascii bytes
 ### 0x0140
  - response: 0x00
- - output: 5800050058000400
+ - output: 
+   - slim: 5800050058000400
+   - pstv: 5000040050000300
 ### 0x0141
  - response: 0x00
- - input: unknown, min ascii size 6 bytes
+ - input: 2byte offset + 1byte size, max offset 0x3EF, max size 0x20
+ - output: unknown data of size read from offset
 ### 0x0142
  - response: 0xD0
 ### 0x0143
