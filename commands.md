@@ -96,16 +96,31 @@
  - unlocks 0x151,0x155,0x156
 ### 0x0153
  - response: 0x00
- - output: 01AA0900
- - input: unknown, min ascii size 4 bytes
+ - input: unknown, min ascii size 4 bytes, read data id?, max id 0x1D
+   - 00 : output:
+     - slim: 01AA0900
+     - pstv: 01001000
+   - 01 : output 6A000000
+   - 02 : output 06000000
+   - 03,06,07,0C-10,12,14,16,1A,1D : output 00
+   - 04,19 : output 02
+   - 05 : output 1400
+   - 08,18 : output 01
+   - 09,0A,0B,17 : output 0000
+   - 11 : output 07
+   - 13 : output 08
+   - 15 : output 03
+   - 1B : output 2800
+   - 1C : output 29
 ### 0x0154
  - response: 0x00
- - input: unknown, min ascii size 6 bytes
+ - input: 2byte offset + 1byte size, max offset 0x3F, max size 0x20
+ - output: unknown data of size read from offset, seems to contain data from 0x153
 ### 0x0155
  - response: 0x00
- - input: unknown, min ascii size 4 bytes
+ - input: unknown, min ascii size 4 bytes, ?write data?
 ### 0x0156
- - response: 0x00
+ - response: 0x00 (?apply data?)
 ### 0x0157
  - response: 0x00
  - unlocks 0x155,0x156
