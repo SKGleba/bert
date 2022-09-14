@@ -66,26 +66,34 @@
  - response: 0x00
  - input: 2byte offset + 1byte size, max offset 0x3EF, max size 0x20
  - output: ConfZZ data of size read from offset
-### 0x0142
- - response: 0xD0
+### 0x0142 - ConfZZ write-backup
+ - response: 0x00
+ - input: 2byte offset + 1byte size + sizeBytes data, max offset 0x3EF, max size 0x20
+ - data is written to backup ConfZZ
 ### 0x0143
  - response: 0x00
+ - unlocks 0x142
 ### 0x0144
  - response: 0x00
-### 0x0145
- - response: 0xD0
+ - locks 0x142
+### 0x0145 - ConfZZ apply-backup-to-main
+ - response: 0x00
+ - backup ConfZZ is written to main?
 ### 0x0146
  - response: 0x00
 ### 0x0147
  - response: 0x00
 ### 0x0150
  - response: 0x00
- - output: 0900001100000000
+ - output: 
+   - slim: 0900001100000000
+   - pstv: 100001AA00000000
 ### 0x0151
  - response: 0x00
+ - locks 0x155, 0x156
 ### 0x0152
  - response: 0x00
- - unlocks 0x155,0x156
+ - unlocks 0x151,0x155,0x156
 ### 0x0153
  - response: 0x00
  - output: 01AA0900
