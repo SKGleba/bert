@@ -15,10 +15,12 @@
 ### 0x0105
  - response: 0x00 if completed, 0x50 if bad/locked args
  - input: unknown, min ascii size 2 bytes
-   - 02 : resp 0x00 unlocks inputs 00,0002,0004,0008
+   - 00 : resp 0x00
+     - shuts down the pstv
+   - 02 : resp 0x00
      - boots the pstv
-   - 03 : resp 0x50
- - takes ~2 seconds to complete
+   - 03 : resp 0x00
+     - enters FSM? semi-booted
 ### 0x0106
  - response: 0x00
  - output: 0400 on slim, 0800 on pstv
@@ -46,9 +48,13 @@
  - response: 0x00
  - input: 3-step handshake, ascii size 80 bytes
 ### 0x0120
- - response: 0x40
+ - response: 0x00
+ - output: 
+   - on pstv: 3105E6740A39E7075C308C6AFDF1BB6E55CC1253A6FD92D00D475D0100000101
 ### 0x0121
- - response: 0x40
+ - response: 0x00
+ - input: unknown, min ascii size 4 bytes, ?id?
+ - output: unknown, seems 4 bytes read from id
 ### 0x0131 - NVS read
  - auth level: T2
  - response: 0x00
