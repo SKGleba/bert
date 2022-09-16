@@ -7,7 +7,9 @@
    - last 4 bytes are variable
 ### 0x0102
  - response: 0x00
- - input: unknown, ascii size 8 bytes
+ - input: 1byte protocol + 1byte baudrate + 2bytes unknown
+   - protocol : 00 ascii, 01 raw/binary
+   - baudrate : 00 38400, 01 115200
 ### 0x0103 - lock T1
  - response: 0x00
 ### 0x0104 - unlock T1
