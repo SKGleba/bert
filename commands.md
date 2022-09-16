@@ -36,7 +36,6 @@
  - input: unknown, min ascii size 4 bytes
 ### 0x0109
  - response: 0x00
- - output: 0900040000000000320000000000000000000000000000000000000000000000
  - input: unknown, min ascii size 2 bytes
    - 00 : output:
      - slim: 0900040000000000320000000000000000000000000000000000000000000000
@@ -130,8 +129,11 @@
 ### 0x0157
  - response: 0x00
  - unlocks 0x155,0x156
-### 0x0160
- - response: 0x33
+### 0x0160 - DEPERSONALIZE
+ - response: 0x00
+ - input: unknown, min size 2 ascii bytes
+   - 01: loong pause, no uuu
+   - 02: FORMATS S/NVS
 ### 0x0161 - ?hard? reset syscon
  - response: 0x00
  - causes ?soft reset?, UUU sent again, console shutdown
@@ -214,9 +216,11 @@
  - response: 0x00
  - output: 0100000000010000
 ### 0x01A0
- - response: 0x40
+ - response: 0x00
+ - output: 0000000000000000000000000000000000000000
 ### 0x01A1
- - response: 0x40
+ - response: 0x00
+ - output: 808080808080808080808080
 ### 0x01B0
  - response: 0x00
  - output: 0000000000000000
@@ -273,13 +277,19 @@
  - output: 2D3A0543
 ### 0x0930
  - response: 0x00
- - output: 01C2
+ - output: 
+   - slim: 01C2
+   - pstv: 0192
 ### 0x0931
  - response: 0x00
- - output: 8043
+ - output: 
+   - slim: 8043
+   - pstv: FFFF
 ### 0x0932
  - response: 0x00
- - output: 2005A900160453000208A900
+ - output: 
+   - slim: 2005A900160453000208A900
+   - pstv: FFFFFFFFFFFFFFFFFFFFFFFF
 ### 0x0940
  - response: 0x00
  - output: 0300
