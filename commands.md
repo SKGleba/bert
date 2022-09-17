@@ -1,20 +1,20 @@
 ## Command list tested with a live unit
-### 0x0100
+### 0x0100 - nop
  - response: 0x00
 ### 0x0101 - get console info
  - response: 0x00
  - output: 3850800011050301030175008040327F
    - last 4 bytes are variable
-### 0x0102
+### 0x0102 - comm settings
  - response: 0x00
  - input: 1byte protocol + 1byte baudrate + 2bytes unknown
-   - protocol : 00 ascii, 01 raw/binary
+   - protocol : 00 ascii, 01 ascii in/binary out
    - baudrate : 00 38400, 01 115200
 ### 0x0103 - lock T1
  - response: 0x00
 ### 0x0104 - unlock T1
  - response: 0x00
-### 0x0105
+### 0x0105 - power control
  - response: 0x00 if completed, 0x50 if bad/locked args
  - input: unknown, min ascii size 2 bytes
    - 00 : resp 0x00
@@ -35,7 +35,7 @@
  - output: 
    - slim: 100001C20000000020008043000000003000A90016045300310020050208A90040FFFFFF00000000
    - pstv: 100001920000000020FFFFFF0000000030FFFFFFFFFFFFFF31FFFFFFFFFFFFFF40001ACA00000000
- - input: unknown, min ascii size 4 bytes
+ - input: unknown, min ascii size 4 bytes, only 0000 seems good
 ### 0x0109
  - response: 0x00
  - input: unknown, min ascii size 2 bytes
