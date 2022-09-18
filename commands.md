@@ -143,7 +143,9 @@
  - response: 0x00
  - causes ?soft reset?, UUU is sent again, faster than 0x162
 ### 0x0163
- - response: 0x33
+ - response: 0x00
+ - input: unknown, min size 2 ascii bytes
+   - 5A: seems to shut down kermit and reset locks, does not UUU 
 ### 0x0168
  - response: 0x00
  - output: 
