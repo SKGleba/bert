@@ -48,14 +48,17 @@
 ### 0x0110 - unlock T8 or T2 or kermit sd mode
  - response: 0x00
  - input: 3-step handshake, ascii size 80 bytes
-### 0x0120
+### 0x0120 - get keyring 0x600
  - response: 0x00
- - output: 
-   - on pstv: 3105E6740A39E7075C308C6AFDF1BB6E55CC1253A6FD92D00D475D0100000101
+ - output: byteswapped data from keyring 0x600
+   - keyring: C477BC5336570D60009F5118052CD5624441E0DD4A3A2E610186E87801010000
+   - command: 53BC77C4600D573618519F0062D52C05DDE04144612E3A4A78E8860100000101
 ### 0x0121
  - response: 0x00
- - input: unknown, min ascii size 4 bytes, ?id?
- - output: unknown, seems 4 bytes read from id
+ - input: unknown, min ascii size 4 bytes, ?little endian offset?
+ - output: unknown, seems 4 bytes read from offset
+   - example in=0004 -> out=94000115 (kermit rev)
+   - example in=1060 -> out=00000029
 ### 0x0131 - NVS read
  - auth level: T2
  - response: 0x00
@@ -241,7 +244,8 @@
 ### 0x01C4
  - response: 0x00
  - output: 36300301FF000400
- - input: unknown, min ascii size 4 bytes
+ - input: unknown, min ascii size 4 bytes, ?id?, max id 0x29
+ - output: unknown, data read from id? for example id=01->data=A408020120000C0C
 ### 0x01D0
  - response: 0x98
 ### 0x01D1
