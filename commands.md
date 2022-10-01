@@ -15,7 +15,7 @@
 ### 0x0104 - unlock T1
  - response: 0x00
 ### 0x0105 - power control
- - response: 0x00 if completed, 0x50 if bad/locked args
+ - response: 0x00 if completed, 0x50 if bad current power state
  - input: unknown, min ascii size 2 bytes
    - 00 : resp 0x00
      - shuts down the pstv
