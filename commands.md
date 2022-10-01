@@ -23,9 +23,9 @@
      - boots the pstv
    - 03 : resp 0x00
      - enters FSM? semi-booted
-### 0x0106
+### 0x0106 - get current state
  - response: 0x00
- - output: 0400 on slim, 0800 on pstv
+ - output: current state
 ### 0x0107 - get date string
  - response: 0x00
  - output: 32303133313231333135353207000000000000000000000000000000
