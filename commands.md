@@ -108,7 +108,7 @@
 ### 0x0152
  - response: 0x00
  - unlocks 0x151,0x155,0x156
-### 0x0153
+### 0x0153 - internal NVS read by id
  - response: 0x00
  - input: unknown, min ascii size 4 bytes, read data id?, max id 0x1D
    - 00 : output:
@@ -126,7 +126,7 @@
    - 15 : output 03
    - 1B : output 2800
    - 1C : output 29
-### 0x0154
+### 0x0154 - internal NVS read
  - response: 0x00
  - input: 2byte offset + 1byte size, max offset 0x3F, max size 0x20
  - output: unknown data of size read from offset, seems to contain data from 0x153
