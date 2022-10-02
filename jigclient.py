@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 '''
 
-PSVita v2 Syscon JIG Client by Proxima (R)
+PSVita v2 Syscon JIG Client by Proxima & SKGleba (R)
 
 '''
 import sys, os, struct, code, binascii
@@ -254,7 +254,8 @@ def handle_cmd(user_cmd, argv):
         case "get-kr600":
             send_simple_cmd("2001000000")
         case "maika-0":
-            send_simple_cmd("2101000400" + argv[2][4:6] + argv[2][2:4])
+            cv_off = "{:04X}".format(int(argv[2][2:], 16))
+            send_simple_cmd("2101000400" + cv_off)
         case "nvs-read":
             cv_off = "0x{:04X}".format(int(argv[2][2:], 16))
             cv_sz = "0x{:02X}".format(int(argv[3][2:], 16))
@@ -303,7 +304,7 @@ def handle_cmd(user_cmd, argv):
             send_simple_cmd("4501000000")
         case "invs-read-id":
             cv_id = "0x{:02X}".format(int(argv[2][2:], 16))
-            cv_cmd = "5301000200" + cv_id[2:4] + "00"
+            cv_cmd = "5301000400" + cv_id[2:4] + "00"
             send_simple_cmd(cv_cmd)
         case "invs-read":
             cv_off = "0x{:04X}".format(int(argv[2][2:], 16))
