@@ -182,7 +182,7 @@
  - output: 
    - slim: 110080016201000000000000
    - pstv: 000000000000000000000000
-### 0x0182
+### 0x0182 - reset the battery controller
  - response: 0x00
  - causes ?hard reset?, UUU is sent again after a longer period (~6 seconds)
    - nothing on PSTV - makes me think its the battery controller
