@@ -10,9 +10,9 @@
  - input: 1byte protocol + 1byte baudrate + 2bytes unknown
    - protocol : 00 ascii, 01 ascii in/binary out
    - baudrate : 00 38400, 01 115200
-### 0x0103 - lock T1
+### 0x0103 - unlock T1
  - response: 0x00
-### 0x0104 - unlock T1
+### 0x0104 - lock T1
  - response: 0x00
 ### 0x0105 - power control
  - response: 0x00 if completed, 0x50 if bad current power state
