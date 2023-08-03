@@ -24,8 +24,9 @@ Tiny 0805 footprint (meant to fit within the PCH-ZCL1 craddle)
 ![image](https://user-images.githubusercontent.com/203427/225658419-1a270cdc-9460-42ed-94f4-285438aee1ef.png)
 
 Nano 0805 footprint (smaller than Tiny) / 5 Volts version available to use with 5V UART modules.
-
 14.8 x 11mm(0.58 x 0.43 inches)
 
 ![image](https://user-images.githubusercontent.com/203427/227506877-3af192a1-2e8c-4319-9034-aa9a998d90dc.png)
+
+![image](https://github.com/mathieulh/PCH-1000-JIG-PCB/assets/203427/695ea0f9-4699-45fd-9cd2-5edc723a76be)
 
