@@ -165,7 +165,7 @@
     (tstamp 31b0425b-a9d1-4f3c-93ad-a46f15a64a13)
     (at 87.36 84.26)
     (attr smd)
-    (fp_text reference "U1" (at 5.064 -1.924) (layer "F.SilkS")
+    (fp_text reference "UDC" (at 3.14 -1.924) (layer "F.SilkS")
         (effects (font (size 1.143 1.143) (thickness 0.152)) (justify left))
       (tstamp 147a5f7c-d116-4aed-9889-d11652713d90)
     )
