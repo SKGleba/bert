@@ -4,7 +4,8 @@ PCB for JIG on PCH-1000/PDEL-1000 PSVITA
 
 Throughhole design: 
 
-![image](https://github.com/SKGleba/bert/assets/203427/c8fe8ea9-4cfc-407f-a4b2-7abe0c29e034)
+![image](https://github.com/SKGleba/bert/assets/203427/014ea361-4cb9-4929-bed0-0701bd7b2052)
+
 
 
 
