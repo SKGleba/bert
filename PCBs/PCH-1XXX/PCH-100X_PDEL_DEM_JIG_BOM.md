@@ -1,16 +1,10 @@
-if you want to build JIG using the Throughhole board you will need the following: 
+if you want to build JIG you will need the following: 
 
 Other board designs follow the same BOM but resistor footprint is changed to 0805
 
 - PSV Craddle PCH-ZCL1
 
 Can be found on eBay or Yahoo Auctions Japan
-
-- Breakout board (until the PCB I designed is tested)
-
-https://www.amazon.com/ELEGOO-Prototype-Soldering-Compatible-Arduino/dp/B072Z7Y19F/
-
-https://www.amazon.com/HiLetgo-Finished-Prototype-Circuit-Breadboard/dp/B00FXHXT80/
 
 - FTDI RS232 USB module (set to 3.3v, you may set to 5V ONLY if you use the 5V version of the board)
 
