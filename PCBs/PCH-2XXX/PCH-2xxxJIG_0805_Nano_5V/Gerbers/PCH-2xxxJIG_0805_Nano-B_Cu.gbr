@@ -1,0 +1,31 @@
+%TF.GenerationSoftware,KiCad,Pcbnew,7.0.6*%
+%TF.CreationDate,2023-08-05T22:40:52+02:00*%
+%TF.ProjectId,PCH-2xxxJIG_0805_Nano,5043482d-3278-4787-984a-49475f303830,rev?*%
+%TF.SameCoordinates,Original*%
+%TF.FileFunction,Copper,L2,Bot*%
+%TF.FilePolarity,Positive*%
+%FSLAX46Y46*%
+G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
+G04 Created by KiCad (PCBNEW 7.0.6) date 2023-08-05 22:40:52*
+%MOMM*%
+%LPD*%
+G01*
+G04 APERTURE LIST*
+%TA.AperFunction,ViaPad*%
+%ADD10C,0.600000*%
+%TD*%
+%TA.AperFunction,Conductor*%
+%ADD11C,0.200000*%
+%TD*%
+G04 APERTURE END LIST*
+D10*
+%TO.N,*%
+X73660000Y-43180000D03*
+X73660000Y-40640000D03*
+%TD*%
+D11*
+%TO.N,*%
+X73660000Y-43180000D02*
+X73660000Y-40640000D01*
+%TD*%
+M02*
