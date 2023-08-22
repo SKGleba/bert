@@ -1,10 +1,9 @@
 # JIG MULTI
-PCB for JIG for PCH-1XXX and PCH-2xxx PSVITA
+PCB for JIG for PCH-100x, VTE-100x and PCH-200x PSVITA
 
-* Currently supprorts PCH-1XXX and PCH-2xxx PSVITA (VTE-1XXX to be added at a later date) at both 3.3V and 5V
+* Currently supprorts PCH-1XXX/PDEL-100x, VTE-100x and PCH-2xxx PSVITA at both 3.3V and 5V
 Throughhole design only.
 
-* TODO: VTE-100X Support
+![image](https://github.com/SKGleba/bert/assets/203427/b407373f-485f-485e-a9bf-5626455d970c)
 
-![image](https://github.com/SKGleba/bert/assets/203427/d7502597-71fb-46e6-b8f7-cc5e3ff573e0)
 
