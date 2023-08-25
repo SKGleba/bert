@@ -25,6 +25,6 @@ Nano 0805 footprint (smaller than Tiny) / 5 Volts version available to use with 
 14.8 x 11mm(0.58 x 0.43 inches)
 ![image](https://github.com/SKGleba/bert/assets/203427/372d7ef9-6fba-4f90-b476-88a99b151ee9)
 
-![image](https://github.com/SKGleba/bert/assets/203427/39ff0f12-9ac7-4c39-9e56-e2ca2cc843e9)
+![image](https://github.com/SKGleba/bert/assets/203427/5390cca5-85bd-479a-bfdf-a0eaa247123b)
 
 
