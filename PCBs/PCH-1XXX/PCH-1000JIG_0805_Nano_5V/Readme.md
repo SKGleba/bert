@@ -1,0 +1,1 @@
+* * CAUTION Be aware that some UART modules advertised as 5V or with a jumper to 5V do NOT shift the power levels for UART TX/RX which will operate at 3.3V, Please measure voltage using a multimeter on your UART module between TX and GND, if it runs at 3.3V Replace the 2K Ohms resistor to a 1K Ohms resistor in the 5V design.
