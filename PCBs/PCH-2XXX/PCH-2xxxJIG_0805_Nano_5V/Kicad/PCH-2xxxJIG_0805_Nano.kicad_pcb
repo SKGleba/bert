@@ -646,7 +646,7 @@
   (gr_text "GND" (at 73.66 38.1) (layer "F.SilkS") (tstamp a8dae683-3a0d-4861-a451-b8b7fe786011)
     (effects (font (size 1 0.5) (thickness 0.15)))
   )
-  (gr_text "1K" (at 66.04 31.7) (layer "F.SilkS") (tstamp a98ce826-406a-4ede-92a6-562e231107dd)
+  (gr_text "2K" (at 66.04 31.7) (layer "F.SilkS") (tstamp a98ce826-406a-4ede-92a6-562e231107dd)
     (effects (font (size 0.5 0.5) (thickness 0.15)))
   )
   (gr_text "GND" (at 63.5 38.1) (layer "F.SilkS") (tstamp b926f6e9-35bf-4f25-9f4a-33f5285b6d5a)
