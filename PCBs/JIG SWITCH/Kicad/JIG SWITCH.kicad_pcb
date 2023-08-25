@@ -1021,7 +1021,7 @@
   (gr_text "PCH JIG MULTI SWITCH BOARD 2.0\nBy Mathieulh" (at 83.82 37.52) (layer "F.SilkS") (tstamp 00a0fdba-4b1e-4f28-907b-217ae1f56d86)
     (effects (font (size 1.5 1.5) (thickness 0.3) bold) (justify left bottom))
   )
-  (gr_text "R1 = 7.5K\nR2 = 10K\nR3 = 0\nR4 = 0\nR5 = 0\nR6 = 7.5K\nR7 = 2K\nR8 = 1K\nR9 = 1K" (at 33.02 115.57) (layer "F.SilkS") (tstamp 360cce71-5cfc-4aa8-88ef-d945a6472c98)
+  (gr_text "R1 = 7.5K\nR2 = 10K\nR3 = 0\nR4 = 0\nR5 = 0\nR6 = 7.5K\nR7 = 2K\nR8 = 2K\nR9 = 1K" (at 33.02 115.57) (layer "F.SilkS") (tstamp 360cce71-5cfc-4aa8-88ef-d945a6472c98)
     (effects (font (size 2 2) (thickness 0.1)) (justify left bottom))
   )
   (gr_text "RX" (at 117.42 85.78) (layer "F.SilkS") (tstamp 4937e8d3-b815-4eb2-a6e8-3ce13aafa4a4)
