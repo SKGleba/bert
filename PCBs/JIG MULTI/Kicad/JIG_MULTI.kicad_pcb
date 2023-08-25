@@ -782,7 +782,7 @@
   (gr_text "VTE" (at 63.5 52) (layer "F.SilkS") (tstamp 2be8fc7f-4921-45c6-b4a0-c8f757848205)
     (effects (font (size 2 2) (thickness 0.4) bold) (justify left bottom))
   )
-  (gr_text "R1 = 1K\nR2 = 1K\nR3 = 1K\nR4 = 150\nR5 = 2K\nR6 = 7.5K" (at 43.18 96.52) (layer "F.SilkS") (tstamp 43648f2e-66c8-4981-bb89-e844e9e530a4)
+  (gr_text "R1 = 2K\nR2 = 1K\nR3 = 1K\nR4 = 150\nR5 = 2K\nR6 = 7.5K" (at 43.18 96.52) (layer "F.SilkS") (tstamp 43648f2e-66c8-4981-bb89-e844e9e530a4)
     (effects (font (size 2 2) (thickness 0.1)) (justify left bottom))
   )
   (gr_text "PC RX" (at 38.1 71.12) (layer "F.SilkS") (tstamp 4ab27c5c-b9e9-4055-a207-d5a7fee84ad2)
