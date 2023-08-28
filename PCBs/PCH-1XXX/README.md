@@ -16,12 +16,13 @@ Smaller 0805 footprint PCB:
 
 
 
-Tiny 0805 footprint (meant to fit within the PCH-ZCL1 craddle)
+Tiny 0805 footprint (design deprecated and no longer supported, using 'Nano' is recommended)
+Tiny 0805 footprint 
 16.6 x 11mm(0.65 x 0.43 inches)
 ![image](https://github.com/SKGleba/bert/assets/203427/c8d68e68-de82-462b-94f4-58cd5b845294)
 
 
-Nano 0805 footprint (smaller than Tiny) / 5 Volts version available to use with 5V UART modules.
+Nano 0805 footprint (meant to fit within the PCH-ZCL1 craddle) / 5 Volts version available to use with 5V UART modules.
 14.8 x 11mm(0.58 x 0.43 inches)
 ![image](https://github.com/SKGleba/bert/assets/203427/372d7ef9-6fba-4f90-b476-88a99b151ee9)
 
