@@ -59,15 +59,18 @@
    - keyset 0xE: unlock T8
 ### 0x0120 - get keyring 0x600
  - response: 0x00
- - output: byteswapped data from keyring 0x600
+ - output: seems to be some serial read from fuses, same as f00d keyring 0x600
+   - uses the SPI<->i2c interface in a special boot mode (command 0x105 mode 03)
    - keyring: C477BC5336570D60009F5118052CD5624441E0DD4A3A2E610186E87801010000
    - command: 53BC77C4600D573618519F0062D52C05DDE04144612E3A4A78E8860100000101
-### 0x0121
+### 0x0121 - SoC i2c device 0x40 read by offset
  - response: 0x00
- - input: unknown, min ascii size 4 bytes, ?little endian offset?
- - output: unknown, seems 4 bytes read from offset
+ - input: 16bit offset (BE) for SoC i2c device 0x40
+ - output: 32bit value read from offset
+   - uses the SPI<->i2c interface in a special boot mode (command 0x105 mode 03)
    - example in=0004 -> out=94000115 (kermit rev)
    - example in=1060 -> out=00000029
+   - blacklisted offsets 0x8-0x1000 in release syscon firmware
 ### 0x0131 - NVS read
  - auth level: T2
  - response: 0x00
