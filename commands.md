@@ -16,7 +16,7 @@
  - response: 0x00
 ### 0x0105 - kermit power control
  - response: 0x00 if completed, 0x50 if bad current power state
- - input: unknown, min ascii size 2 bytes
+ - input: requested new power state, 1byte
    - 00 : resp 0x00
      - power-off
    - 02 : resp 0x00
@@ -41,16 +41,17 @@
  - output: 
    - slim: 100001C20000000020008043000000003000A90016045300310020050208A90040FFFFFF00000000
    - pstv: 100001920000000020FFFFFF0000000030FFFFFFFFFFFFFF31FFFFFFFFFFFFFF40001ACA00000000
- - input: unknown, min ascii size 4 bytes, only 0000 seems good
-### 0x0109
+ - input: unknown, min size 2 bytes, only 0000 seems good
+### 0x0109 - get task states
  - response: 0x00
- - input: unknown, min ascii size 2 bytes
+ - input: mem buf idx ( 00 / 01 )
    - 00 : output:
      - slim: 0900040000000000320000000000000000000000000000000000000000000000
      - pstv: 0900080000000000510000000000000000000000000000000000000000000000
    - 01 : output:
      - slim: 0802020000000200610009020400000004003200000000000000000000000000
      - pstv: 0802200000002000090009020800000008005100000000000000000000000000
+   - the buffers are updated by various tasks, from various states
 ### 0x0110 - unlock via handshake
  - response: 0x00
  - input: 3-step handshake, ascii size 80 bytes
@@ -75,15 +76,19 @@
  - auth level: T2
  - response: 0x00
  - input: 2byte offset + 1byte size
+ - output: data read from given offset
 ### 0x0132 NVS write
  - auth level: T2
  - response: 0x00
  - input: 2byte offset + 1byte size + sizeBytes data, min size 6 ascii bytes
-### 0x0140
+ - output: data read from given offset
+### 0x0140 - ConfZZ param?
  - response: 0x00
- - output: 
+ - output: 32bit values from the 0x10 field before both main and backup ConfZZ
    - slim: 5800050058000400
    - pstv: 5000040050000300
+     - whole buf 03B800: 43 6F 6E 66 5A 5A F0 03 50 00 03 00 E4 51 FF FF
+     - whole buf 03BC00: 43 6F 6E 66 5A 5A F0 03 50 00 04 00 7E 52 FF FF
 ### 0x0141 - ConfZZ read
  - response: 0x00
  - input: 2byte offset + 1byte size, max offset 0x3EF, max size 0x20
@@ -92,15 +97,13 @@
  - response: 0x00
  - input: 2byte offset + 1byte size + sizeBytes data, max offset 0x3EF, max size 0x20
  - data is written to backup ConfZZ
-### 0x0143
+### 0x0143 - Unlock 0x142
  - response: 0x00
- - unlocks 0x142
-### 0x0144
+### 0x0144 - Lock 0x142
  - response: 0x00
- - locks 0x142
-### 0x0145 - ConfZZ apply-backup-to-main
+### 0x0145 - Switch active ConfZZ?
  - response: 0x00
- - backup ConfZZ is written to main?
+ - active ConfZZ is changed / backup ConfZZ is written to main?
 ### 0x0146
  - response: 0x00
 ### 0x0147
