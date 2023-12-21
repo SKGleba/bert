@@ -14,15 +14,16 @@
  - response: 0x00
 ### 0x0104 - lock T1
  - response: 0x00
-### 0x0105 - power control
+### 0x0105 - kermit power control
  - response: 0x00 if completed, 0x50 if bad current power state
  - input: unknown, min ascii size 2 bytes
    - 00 : resp 0x00
-     - shuts down the pstv
+     - power-off
    - 02 : resp 0x00
-     - boots the pstv
+     - power-on
    - 03 : resp 0x00
-     - enters FSM? semi-booted
+     - powers on the SoC in SD boot mode, but does not reply to the challenge
+     - this is used to talk with internal SoC subsystems via a SPI<->I2C interface
 ### 0x0106 - get power state
  - response: 0x00
  - output: current power state
@@ -50,9 +51,12 @@
    - 01 : output:
      - slim: 0802020000000200610009020400000004003200000000000000000000000000
      - pstv: 0802200000002000090009020800000008005100000000000000000000000000
-### 0x0110 - unlock T8 or T2 or kermit sd mode
+### 0x0110 - unlock via handshake
  - response: 0x00
  - input: 3-step handshake, ascii size 80 bytes
+   - keyset 0x0: start/enter SD boot mode
+   - keyset 0x1: unlock T2
+   - keyset 0xE: unlock T8
 ### 0x0120 - get keyring 0x600
  - response: 0x00
  - output: byteswapped data from keyring 0x600
