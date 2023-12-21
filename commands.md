@@ -105,9 +105,13 @@
  - response: 0x00
  - active ConfZZ is changed / backup ConfZZ is written to main?
 ### 0x0146
- - response: 0x00
+ - computes and checks some sha1, integrity checks?
+ - response: 0x00 if all ok
+ - input: unk, seems like 3 bytes followed by a sha1?
 ### 0x0147
- - response: 0x00
+ - computes and checks some sha1, integrity checks?
+ - response: 0x00 if all ok
+ - input: unk, seems like 3 bytes followed by a sha1?
 ### 0x0150
  - response: 0x00
  - output: 
