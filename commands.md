@@ -114,15 +114,15 @@
  - input: unk, seems like 3 bytes followed by a sha1?
 ### 0x0150
  - response: 0x00
- - output: 
+ - output: some invs flags preset?
    - slim: 0900001100000000
    - pstv: 100001AA00000000
-### 0x0151
+### 0x0151 - Unlock INVS writes (0xAA)
  - response: 0x00
- - locks 0x155, 0x156
-### 0x0152
+ - unlocks 0x155 & 0x156, writes 0xAA to invs+1
+### 0x0152 - Lock INVS writes
  - response: 0x00
- - unlocks 0x151,0x155,0x156
+ - locks 0x155 & 0x156, writes 0x00 to invs+1
 ### 0x0153 - internal NVS read by id
  - response: 0x00
  - input: unknown, min ascii size 4 bytes, read data id?, max id 0x1D
@@ -150,9 +150,9 @@
  - input: unknown, min ascii size 4 bytes, ?write data?
 ### 0x0156
  - response: 0x00 (?apply data?)
-### 0x0157
+### 0x0157 - Unlock INVS writes (0x11)
  - response: 0x00
- - unlocks 0x155,0x156
+ - unlocks 0x155 & 0x156, writes 0x11 to invs+1
 ### 0x0160 - DEPERSONALIZE
  - response: 0x00
  - input: unknown, min size 2 ascii bytes
