@@ -1,5 +1,5 @@
 # bert
-*"Bert"* is a nickname given to a UART interface RPC client of PSP2's System Controller.
+*"Bert"* is a nickname given to a UART RPC interface client of PSP2's System Controller.
 <br><br>
 The Playstation Vita/TV's System Controller - codenamed *"Ernie"* - is a low-power MCU that handles peripherals such as PMIC, USB controller, physical buttons, touch panels and more. 
 It hosts a RPC server accessible from multiple interfaces, each of which has its own set of available commands.<br>
