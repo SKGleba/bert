@@ -13,13 +13,16 @@ Supported units:
  - DEM-3000 : **only IRT-002**
    - unknown interface-enable procedure on IRT-001 / *"slideys"*
  - CEM-3000 : **supported**
+ - PDEL-1000 : **supported**
+ - PTEL-1000 : **supported**
  - PCH-1000 : **supported**
  - VTE-1000 : **supported**
  - PCH-2000 : **supported**
+ - PTEL-2000 : **supported**
 
 For all supported units, the UART interface logic level is 1.8v.
 
-### PCH-1000, DEM-3000, CEM-3000
+### PCH-1000, PTEL-1000, DEM-3000, CEM-3000, PDEL-1000
 On those units, the circuit probes as well as Syscon UART are exposed via the [MultiConnector](https://wiki.henkaku.xyz/vita/UDC#PCH-1XXX_Pinout).
  - Pin 6: Syscon RX
  - Pin 7: Syscon TX
@@ -50,7 +53,7 @@ It is recommended to use the big testpads above the flat connector:
 The UART interface is enabled if the *"Jig Sense 1"* probe is at 0.47v-0.738v during *"Jig Sense 2"* probe state change.<br>
 State change can be achieved by connecting the probe to GND using a button or jumper wire.
 
-### PCH-2000
+### PCH-2000, PTEL-2000
 On this unit, the circuit probe as well as Syscon UART are exposed via [microUSB](https://wiki.henkaku.xyz/vita/UDC#PCH-2XXX_Pinout).
  - Pin 2: D- : Syscon TX
  - Pin 3: D+ : Syscon RX
