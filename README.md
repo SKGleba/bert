@@ -1,7 +1,7 @@
 # bert
 *"Bert"* is a nickname given to a UART RPC interface client of PSP2's System Controller.
 <br><br>
-The Playstation Vita/TV's System Controller - codenamed *"Ernie"* - is a low-power MCU that handles peripherals such as PMIC, USB controller, physical buttons, touch panels and more. 
+The PlayStation Vita/TV's System Controller - codenamed *"Ernie"* - is a low-power MCU that handles peripherals such as PMIC, USB controller, physical buttons, touch panels and more. 
 It hosts a RPC server accessible from multiple interfaces, each of which has its own set of available commands.<br>
 One of the interfaces is UART, enabled by a special *"jig"* circuit that sets specific voltage levels on syscon's voltage sense pins/probes. 
 This interface exposes around 100 RPC commands ranging from simple peripheral details retrieving to more complex procedures such as flash programming or alternative SoC boot modes.<br>
@@ -31,7 +31,7 @@ On those units, the circuit probes as well as Syscon UART are exposed via the [M
 The UART interface is enabled if the *"Jig Sense 1"* probe is at 0.47v-0.738v during *"Jig Sense 2"* probe state change.<br>
 State change can be achieved by connecting the probe to GND using a button or jumper wire.<br>
 A [MultiConnector breakout board](https://github.com/SKGleba/bert/blob/main/PCBs/multicn-UDC-breakout-kicad.zip) is recommended. 
-The biggest challenge is finding a populated connector, we found that the **PCH-ZCL1** *"Sony Playstation Vita Cradle"* has one, but it is hard to source.<br>
+The biggest challenge is finding a populated connector, we found that the **PCH-ZCL1** *"Sony PlayStation Vita Cradle"* has one, but it is hard to source.<br>
 Another possibility is using the motherboard's tiny testpads, or lifting and moving pins on a retail USB MultiConnector cable.<br>
 
 ### VTE-1000
@@ -152,7 +152,7 @@ bert.py [COMMANDu16] <SIZEu16> <DATA>               : execute a command, e.g. '0
  - Some breakout/jig PCB schematics and gerber files can be found in [PCBs](PCBs)
  - Alternative JIG schematics can be found in [schematics](schematics)
  - This project is WIP, the syscon firmware is still being reversed and commands documented.
-    - It is not recommended to try unknown commands, they might cause an unrecoverable brick
+    - It is not recommended trying unknown commands, they might cause an unrecoverable brick
 <br><br>
 
 ## Credits
@@ -165,4 +165,4 @@ Additional thanks to:
  - Mathieulh, for alternative PCB schematics and circuits
  - d3s, for the multiCn breakout board
  - Everyone that contributed ideas, tested and helped debug the JIG circuits
- - [henkaku wiki](https://wiki.henkaku.xyz) contributors
+ - [henkaku wiki](https://wiki.henkaku.xyz) contributors.
