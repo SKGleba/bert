@@ -14,15 +14,13 @@ Supported units:
    - unknown interface-enable procedure on IRT-001 / *"slideys"*
  - CEM-3000 : **supported**
  - PDEL-1000 : **supported**
- - PTEL-1000 : **supported**
  - PCH-1000 : **supported**
  - VTE-1000 : **supported**
  - PCH-2000 : **supported**
- - PTEL-2000 : **supported**
 
 For all supported units, the UART interface logic level is 1.8v.
 
-### PCH-1000, PTEL-1000, DEM-3000, CEM-3000, PDEL-1000
+### PCH-1000, DEM-3000, CEM-3000, PDEL-1000
 On those units, the circuit probes as well as Syscon UART are exposed via the [MultiConnector](https://wiki.henkaku.xyz/vita/UDC#PCH-1XXX_Pinout).
  - Pin 6: Syscon RX
  - Pin 7: Syscon TX
@@ -53,7 +51,7 @@ It is recommended to use the big testpads above the flat connector:
 The UART interface is enabled if the *"Jig Sense 1"* probe is at 0.47v-0.738v during *"Jig Sense 2"* probe state change.<br>
 State change can be achieved by connecting the probe to GND using a button or jumper wire.
 
-### PCH-2000, PTEL-2000
+### PCH-2000
 On this unit, the circuit probe as well as Syscon UART are exposed via [microUSB](https://wiki.henkaku.xyz/vita/UDC#PCH-2XXX_Pinout).
  - Pin 2: D- : Syscon TX
  - Pin 3: D+ : Syscon RX
@@ -101,10 +99,15 @@ The reply contains a command return status, currently the following status IDs a
  - 0x50 : "WRONG_POWER_STATE"
 
 ### Locks
-Some commands are locked behind *"locks"* - conditions that can usually be set using other commands.<br>
+Some commands are locked behind *"locks"* - bits that can be set using other commands.<br>
 For example the power control command - 0x105 - requires the T1 *"lock"* to be removed/unlocked by first calling cmd 0x103.<br>
 Some commands, such as NVS-read (0x131), might be locked behind multiple *"locks"* - here besides T1, the T8 lock needs to be removed/unlocked first by performing a 3-step keyset 0x1 handshake with cmd 0x110.<br><br>
-TODO: document locks per cmd
+Full list of commands with their locks can be found [there](https://github.com/SKGleba/bert/blob/main/commands.md#command-offset-lock)
+Un/lock, where Tx is the *"lock"* bitmask:
+ - T1: 0x103 / 0x104
+ - T2: 0x110 keyset 0x1
+ - T4: 0x900 with key / 0x901
+ - T8: 0x110 keyset 0xE
 
 ### The Script
 Provided is a python script that can be used to communicate with the RPC server over UART.<br>
@@ -134,7 +137,7 @@ bert.py wipe-nvs                                    : wipe NVS with 0xFF        
 bert.py reset / reset-hard                          : soft-reset / hard reset ernie                    : 0x161 / 0x162
 bert.py kill                                        : full, hard shutdown of all components            : 0x163
 bert.py reset-bic                                   : reset the battery controller                     : 0x182
-bert.py unlock-1 / lock-1                           : un/lock the T1 lock                              : 0x104 / 0x103
+bert.py unlock-1 / lock-1                           : un/lock the T1 lock                              : 0x103 / 0x104
 bert.py unlock-4 / lock-4                           : un/lock the T4 lock with a passcode              : 0x900 / 0x901
 bert.py handshake-0 / handshake-1 / handshake-E     : authenticate with the selected keyset            : 0x110
 bert.py unlock-qa                                   : unlock the T1 and T8 locks                       : 0x103 + 0x110 (E)
@@ -146,8 +149,20 @@ bert.py [COMMANDu16] <SIZEu16> <DATA>               : execute a command, e.g. '0
 <br>
 
 ## Notes
-TODO
+ - Some breakout/jig PCB schematics and gerber files can be found in [PCBs](PCBs)
+ - Alternative JIG schematics can be found in [schematics](schematics)
+ - This project is WIP, the syscon firmware is still being reversed and commands documented.
+    - It is not recommended to try unknown commands, they might cause an unrecoverable brick
 <br><br>
 
 ## Credits
-TODO
+This project was made in collaboration with Proxima.<br><br>
+Additional thanks to:
+ - yifanlu, for initial syscon JIG research and documentation
+ - pop13_13, for help with finding the PCH-2000 JIG circuit
+ - S1ngyy, for help with finding the PCH-1000 JIG circuit
+ - xyz, for help with finding the VTE-1000 JIG circuit
+ - Mathieulh, for alternative PCB schematics and circuits
+ - d3s, for the multiCn breakout board
+ - Everyone that contributed ideas, tested and helped debug the JIG circuits
+ - [henkaku wiki](https://wiki.henkaku.xyz) contributors
