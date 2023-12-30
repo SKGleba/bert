@@ -383,8 +383,8 @@
  - output: 0000C0FF0000C0FF0000C0FF0000C0FF
 
 
-## Command list from syscon
-<ID, OFFSET, AUTH>
+## Command, offset, lock
+<ID, OFFSET, AUTH> <br>
 <100h, sub_1E814, 0>                   
 <101h, sub_1E830, 0>                   
 <102h, sub_1E8B5, 0>                   
