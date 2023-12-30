@@ -101,8 +101,8 @@ The reply contains a command return status, currently the following status IDs a
 ### Locks
 Some commands are locked behind *"locks"* - bits that can be set using other commands.<br>
 For example the power control command - 0x105 - requires the T1 *"lock"* to be removed/unlocked by first calling cmd 0x103.<br>
-Some commands, such as NVS-read (0x131), might be locked behind multiple *"locks"* - here besides T1, the T8 lock needs to be removed/unlocked first by performing a 3-step keyset 0x1 handshake with cmd 0x110.<br><br>
-Full list of commands with their locks can be found [there](https://github.com/SKGleba/bert/blob/main/commands.md#command-offset-lock)
+Some commands, such as NVS-read (0x131), might be locked behind multiple *"locks"* - here besides T1, the T8 lock needs to be removed/unlocked first by performing a 3-step keyset 0x1 handshake with cmd 0x110.<br>
+Full list of commands with their locks can be found [there](https://github.com/SKGleba/bert/blob/main/commands.md#command-offset-lock) <br>
 Un/lock, where Tx is the *"lock"* bitmask:
  - T1: 0x103 / 0x104
  - T2: 0x110 keyset 0x1
