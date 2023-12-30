@@ -164,5 +164,6 @@ Additional thanks to:
  - xyz, for help with finding the VTE-1000 JIG circuit
  - Mathieulh, for alternative PCB schematics and circuits
  - d3s, for the multiCn breakout board
+ - SonicMastr, for ideas and early tests
  - Everyone that contributed ideas, tested and helped debug the JIG circuits
  - [henkaku wiki](https://wiki.henkaku.xyz) contributors.
